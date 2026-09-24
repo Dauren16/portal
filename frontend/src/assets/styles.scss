@@ -1,0 +1,41 @@
+@use './normalize';
+@use './fonts';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --header-bg-color: #FFFFFF;
+  --primary-text-color: #1F1F1F;
+  --secondary-text-color: #FFFFFF;
+  --primary-btn-bg-color: #3640E8;
+  --language-btn-bg-color: #263E6E;
+  --footer-bg-color: #263E6E;
+  --content-bg-color: #f0f2f4;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+html, body {
+  font-family: 'Nunito Sans', 'Arial', sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
