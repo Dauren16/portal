@@ -1,0 +1,21 @@
+@if(systems(); as systems) {
+  <section class="systems">
+    <div class="container">
+      <ul class="systems__list">
+        @for (system of systems; track system.id) {
+          <li class="systems__item">
+            <a class="card" [href]="system.link" target="_blank">
+              @if(system.image) {
+                <img class="card__image" [src]="'/logo/' + system.image" width="130" alt="#">
+              }
+              <span class="card__title">{{ system.title }}</span>
+            </a>
+          </li>
+        }
+      </ul>  
+    </div>
+  </section>
+} @else {
+  <app-loader/>
+}
+

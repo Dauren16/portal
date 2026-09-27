@@ -1,0 +1,42 @@
+@if(contacts(); as contacts) {
+  <section class="contacts">
+    <div class="container">
+      <ul class="contacts__list">
+        @for (contact of contacts; track contact.id) {
+          <li class="contacts__item">
+            <div class="contact">
+              <h2 class="contact__title">{{ contact.title }}</h2>
+              <div class="contact__phone-wrapper">
+                <h3 class="contact__heading">Телефон</h3>
+                <div class="contact__phones">
+                  @for (phone of contact.phones; track phone) {
+                    <span class="contact__phone">{{ phone }}</span>
+                  }
+                </div>
+              </div>
+              <div class="contact__emails-wrapper">
+                <h3 class="contact__heading">Почта</h3>
+                <div class="contact__emails">
+                  @for (email of contact.emails; track email) {
+                    <span class="contact__email">{{ email }}</span>
+                  }
+                </div>
+              </div>
+              <div class="contact__forms-wrapper">
+                <h3 class="contact__heading">Формы заявок</h3>
+                <div class="contact__forms">
+                  @for (form of contact.forms; track form) {
+                    <a class="contact__form" [href]="'/downloads/' + form.fileName" download>{{ form.title }}</a>
+                  }
+                </div>
+              </div>
+            </div>
+          </li>
+        }
+      </ul>
+    </div>
+  </section>
+} @else {
+  <app-loader/>
+}
+

@@ -1,0 +1,19 @@
+@if(softwares(); as softwares) {
+  <section class="softwares">
+    <div class="container">
+      <ul class="softwares__list">
+        @for (software of softwares; track software.id) {
+          <li class="softwares__item">
+            <a class="soft" [href]="'/downloads/' + software.link" download>
+              <img class="soft__image" width="130" [src]="'logo/' + software.img" alt="">
+              <span class="soft__title">{{ software.title }}</span>
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+  </section>
+} @else {
+  <app-loader/>
+}
+
