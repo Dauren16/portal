@@ -8,49 +8,49 @@ export class SoftwareService {
       id: 1,
       title: 'Tumar/Cryptosocket',
       img: 'cryptosocket.svg',
-      link: 'SetupCSPv6.3.4.02.exe'
+      fileName: 'SetupCSPv6.3.4.02.exe'
     },
     {
       id: 2,
       title: 'Tumar для Windows 7',
       img: 'tumar.ico',
-      link: 'UpdateCSPv6.3.4.02_ucgo_release_windows7.exe'
+      fileName: 'UpdateCSPv6.3.4.02_ucgo_release_windows7.exe'
     },
     {
       id: 3,
       title: 'NCALayer 64-bit',
       img: 'ncalayer.png',
-      link: 'NCALayerInstall_x86.exe'
+      fileName: 'NCALayerInstall_x86.exe'
     },
     {
       id: 4,
       title: 'NCALayer 32-bit',
       img: 'ncalayer.png',
-      link: 'NCALayerInstall_x86.exe'
+      fileName: 'NCALayerInstall_x86.exe'
     },
     {
       id: 5,
       title: 'Панель управления KAZTOKEN',
       img: 'kaztoken.png',
-      link: 'KAZTOKEN_for_Windows_v4.6.4.0.exe'
+      fileName: 'KAZTOKEN_for_Windows_v4.6.4.0.exe'
     },
     {
       id: 6,
       title: 'CERTEX VPN Client',
       img: 'certex.ico',
-      link: '#'
+      fileName: '#'
     },
     {
       id: 7,
       title: 'Chrome x64',
       img: 'chrome.png',
-      link: '#'
+      fileName: '#'
     },
     {
       id: 8,
       title: 'Firefox x64',
       img: 'firefox.png',
-      link: '#'
+      fileName: '#'
     }
     
   ]

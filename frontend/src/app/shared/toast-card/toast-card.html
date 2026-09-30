@@ -1,0 +1,10 @@
+<div class="toast"
+  [class]="'toast--' + toast().type ">
+  <div class="toast__content">
+    <span class="toast__title">{{ toastTitle() }}</span>
+    <p class="toast__descr">{{ toast().message }}</p>
+  </div>
+  <button class="toast__btn" (click)="closeToast()" type="button" aria-label="Закрыть сообщение">
+    <img class="toast__close-logo" src="./logo/close-logo.png" alt="" width="24">
+  </button>
+</div>

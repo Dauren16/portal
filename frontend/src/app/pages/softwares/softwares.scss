@@ -11,25 +11,5 @@
     align-items: center;
     justify-content: center;
   }
-
   
-}
-
-.soft {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #FFFFFF;
-  border-radius: 30px;
-  width: 250px;
-  min-height: 250px;
-  background-color: #FFFFFF;
-  padding: 25px;
-
-  &:hover {
-    background-color: var(--primary-btn-bg-color);
-    color: var(--secondary-text-color);
-    transition: background 0.3s ease;
-  }
 }
