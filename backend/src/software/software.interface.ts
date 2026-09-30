@@ -1,6 +1,6 @@
 export interface ISoftware {
   id: number;
   title: string;
-  link: string;
+  fileName: string;
   img?: string;
 }

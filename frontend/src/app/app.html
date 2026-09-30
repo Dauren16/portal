@@ -1,4 +1,9 @@
 <app-header></app-header>
+<div class="toasts">
+  @for(toast of toastService.toasts(); track toast.id) {
+    <app-toast-card [toast]="toast" (closed)="toastService.closeToast(toast)"/>
+  }
+</div>
 <main class="main">
   <router-outlet></router-outlet>
 </main>

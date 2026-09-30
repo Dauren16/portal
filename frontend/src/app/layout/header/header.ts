@@ -13,5 +13,6 @@ export class Header {
 
   softwaresPage: string = 'Программные обеспечения';
   contactsPage: string = 'Контакты';
-  homePage: string = 'Главная'
+  homePage: string = 'Главная';
+  calendarPage: string = 'Календарь';
 }
