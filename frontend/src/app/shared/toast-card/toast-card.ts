@@ -1,6 +1,6 @@
 import { Component, computed, input, output } from '@angular/core';
 import { IToast } from '../../core/interfaces/IToast';
-import { TOAST_TITLES, ToastType } from '../../core/enums/ToastType';
+import { TOAST_TITLES } from '../../core/enums/ToastType';
 
 @Component({
   selector: 'app-toast-card',
