@@ -6,6 +6,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { SoftwareModule } from './software/software.module';
 import { ContactsModule } from './contacts/contacts.module';
+import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { ContactsModule } from './contacts/contacts.module';
       rootPath: join(process.cwd(), '..', 'storage', 'downloads'),
       serveRoot: '/downloads',
     }),
+    PrismaModule,
     SystemsModule,
     SoftwareModule,
     ContactsModule

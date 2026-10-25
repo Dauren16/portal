@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { SystemsService } from './systems.service';
-import { ISystem } from './systems.interface';
+import type { System } from '../generated/prisma/client';
 
 @Controller('systems')
 export class SystemsController {
@@ -8,7 +8,7 @@ export class SystemsController {
   constructor(private readonly systemsService: SystemsService) {}
 
   @Get()
-  findAll(): ISystem[] {
+  findAll(): Promise<System[]> {
     return this.systemsService.findAll();
   }
 }
