@@ -1,6 +1,6 @@
 <a class="soft" [href]="'/downloads/' + software().fileName" download>
-  @if(software().img) {
-    <img class="soft__image" width="130" [src]="'/logo/' + software().img" alt="">
+  @if(software().image) {
+    <img class="soft__image" width="130" [src]="'/logo/' + software().image" alt="">
   }
   <span class="soft__title">{{ software().title }}</span>
 </a>

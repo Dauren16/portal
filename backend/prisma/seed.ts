@@ -27,6 +27,21 @@ async function main() {
     ],
   });
 
+  await prisma.software.deleteMany();
+
+  await prisma.software.createMany({
+    data: [
+      { title: 'Tumar/Cryptosocket', image: 'cryptosocket.svg', fileName: 'SetupCSPv6.3.4.02.exe'},
+      { title: 'Tumar для Windows 7', image: 'tumar.ico', fileName: 'UpdateCSPv6.3.4.02_ucgo_release_windows7.exe' },
+      { title: 'NCALayer 64-bit', image: 'ncalayer.png', fileName: 'NCALayerInstall_x64.exe' },
+      { title: 'NCALayer 32-bit', image: 'ncalayer.png', fileName: 'NCALayerInstall_x86.exe' },
+      { title: 'Панель управления KAZTOKEN', image: 'kaztoken.png', fileName: 'KAZTOKEN_for_Windows_v4.6.4.0.exe' },
+      { title: 'CERTEX VPN Client', image: 'certex.ico', fileName: 'SetupCertexVpnClient_bspd_10.61.40.56_2.1.2.4' },
+      { title: 'Chrome x64', image: 'chrome.png', fileName: 'ChromeStandaloneSetup64.exe' },
+      { title: 'Firefox x64', image: 'firefox.png', fileName: 'Firefox Setup 120.0.1 x64' },
+    ]
+  })
+
   console.log('Seed: системы добавлены');
 }
 
