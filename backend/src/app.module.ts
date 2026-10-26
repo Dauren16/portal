@@ -7,6 +7,7 @@ import { join } from 'path';
 import { SoftwareModule } from './software/software.module';
 import { ContactsModule } from './contacts/contacts.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { ApplicationsModule } from './applications/applications.module';
 
 @Module({
   imports: [
@@ -17,7 +18,8 @@ import { PrismaModule } from './prisma/prisma.module';
     PrismaModule,
     SystemsModule,
     SoftwareModule,
-    ContactsModule
+    ContactsModule,
+    ApplicationsModule
   ],
   controllers: [AppController],
   providers: [AppService],

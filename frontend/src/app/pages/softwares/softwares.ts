@@ -11,6 +11,6 @@ import { SoftwareCard } from '../../shared/software-card/software-card';
   styleUrl: './softwares.scss',
 })
 export class Softwares {
-  private softwaresApi: SoftwaresApi = inject(SoftwaresApi)
-  softwares = toSignal(this.softwaresApi.getSoftwares())
+  private softwaresApi: SoftwaresApi = inject(SoftwaresApi);
+  softwares = toSignal(this.softwaresApi.getSoftwares());
 }
