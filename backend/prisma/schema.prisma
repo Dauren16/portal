@@ -15,3 +15,12 @@ model System {
 
   @@map("systems")
 }
+
+model Software {
+  id Int @id @default(autoincrement())
+  title String
+  image String?
+  fileName String
+
+  @@map("softwares")
+}

@@ -1,10 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { Softwares } from '../../pages/softwares/softwares';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, Softwares, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
