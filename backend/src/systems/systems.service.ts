@@ -5,9 +5,7 @@ import type { System } from '../generated/prisma/client';
 @Injectable()
 export class SystemsService {
   
-  constructor(private readonly prismaService: PrismaService) {
-
-  }
+  constructor(private readonly prismaService: PrismaService) {}
 
   findAll(): Promise<System[]> {
     return this.prismaService.system.findMany({

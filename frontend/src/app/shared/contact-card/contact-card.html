@@ -16,12 +16,4 @@
       }
     </div>
   </div>
-  <div class="contact__forms-wrapper">
-    <h3 class="contact__heading">Формы заявок</h3>
-    <div class="contact__forms">
-      @for (form of contact().forms; track form) {
-        <a class="contact__form" [href]="'/downloads/' + form.fileName" download>{{ form.title }}</a>
-      }
-    </div>
-  </div>
 </div>

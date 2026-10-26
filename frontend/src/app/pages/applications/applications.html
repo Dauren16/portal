@@ -1,0 +1,15 @@
+@if(applications(); as applications) {
+  <section class="applications">
+    <div class="container">
+      <ul class="applications__list">
+        @for (application of applications; track application.id) {
+          <li class="applications__item">
+            <app-application-card [application]="application"/>
+          </li>
+        }
+      </ul>
+    </div>
+  </section>
+} @else {
+  <app-loader/>
+}

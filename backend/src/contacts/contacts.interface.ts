@@ -3,10 +3,4 @@ export interface IContact {
   title: string;
   emails: string[];
   phones: string[];
-  forms: IForm[];
-}
-
-export interface IForm {
-  title: string;
-  fileName: string;
 }

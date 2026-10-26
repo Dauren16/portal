@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #FFFFFF;
+  border-radius: 30px;
+  width: 200px;
+  height: 200px;
+  background-color: #FFFFFF;
+  padding: 25px;
+  
+  &:hover {
+    background-color: var(--primary-btn-bg-color);
+    color: var(--secondary-text-color);
+    transition: background 0.3s ease;
+  }
+}

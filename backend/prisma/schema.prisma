@@ -24,3 +24,20 @@ model Software {
 
   @@map("softwares")
 }
+
+model Application {
+  id Int @id @default(autoincrement())
+  title String
+  fileName String
+
+  @@map("applications")
+}
+
+model Contact {
+  id Int @id @default(autoincrement())
+  title String
+  emails String[]
+  phones String[]
+
+  @@map("contacts")
+}

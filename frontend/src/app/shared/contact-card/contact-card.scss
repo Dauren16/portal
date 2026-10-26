@@ -8,13 +8,14 @@
   flex-direction: column;
   background-color: var(--back);
   background-color: #FFFFFF;
+  text-align: center;
   padding: 25px;
   justify-content: space-between;
   border: 1px solid #FFFFFF;
   border-radius: 30px;
   width: 450px;
-  min-height: 700px;
-  font-size: 1em;
+  height: 420px;
+  font-size: 1.05em;
 
   &__title, &__heading {
     text-align: center;
