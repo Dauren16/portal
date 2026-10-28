@@ -52,7 +52,7 @@ async function main() {
       { title: 'ИС Адресный регистр - Разблокировка', fileName: 'AR_unlock.docx' },
       { title: 'ИС Адресный регистр - Удаление', fileName: 'AR_delete.docx' },
       { title: 'ИС Адресный регистр - Доступ', fileName: 'AR_open.docx' },
-      { title: 'Организация доступа к ЕТС ГО', fileName: 'form_ETS.docx' },
+      { title: 'Организация доступа к ЕТС ГО', fileName: 'form_ETS.doc' },
     ]
   })
 
