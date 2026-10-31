@@ -3,27 +3,39 @@
     <div class="header__wrapper">
       <a class="header__link" href="#">
         <img class="header__logo" src="./logo/nitec.svg" alt="#">
-        <h1 class="header__title">{{ title() }}</h1>
+        <h1 class="header__title">{{ 'header.title' | t }}</h1>
       </a>
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-item"><a routerLink="" routerLinkActive="header__nav-link--active" [routerLinkActiveOptions]="{ exact: true }" class="header__nav-link">{{ homePage }}</a></li>
-          <li class="header__nav-item"><a routerLink="softwares" routerLinkActive="header__nav-link--active" class="header__nav-link">{{ softwaresPage }}</a></li>
-          <li class="header__nav-item"><a routerLink="contacts" routerLinkActive="header__nav-link--active" class="header__nav-link">{{ contactsPage }}</a></li>
-          <li class="header__nav-item"><a routerLink="applications" routerLinkActive="header__nav-link--active" class="header__nav-link">{{ applicationsPage }}</a></li>
-          <li class="header__nav-item"><a routerLink="calendar" routerLinkActive="header__nav-link--active" class="header__nav-link">{{ calendarPage }}</a></li>
+          <li class="header__nav-item"><a routerLink="" routerLinkActive="header__nav-link--active" [routerLinkActiveOptions]="{ exact: true }" class="header__nav-link">{{ 'header.main' | t }}</a></li>
+          <li class="header__nav-item"><a routerLink="softwares" routerLinkActive="header__nav-link--active" class="header__nav-link">{{ 'header.programs' | t }}</a></li>
+          <li class="header__nav-item"><a routerLink="contacts" routerLinkActive="header__nav-link--active" class="header__nav-link">{{ 'header.contacts' | t }}</a></li>
+          <li class="header__nav-item"><a routerLink="applications" routerLinkActive="header__nav-link--active" class="header__nav-link">{{ 'header.forms' | t }}</a></li>
+          <li class="header__nav-item"><a routerLink="calendar" routerLinkActive="header__nav-link--active" class="header__nav-link">Календарь</a></li>
         </ul>
       </nav>
-      <div class="language">
-        <button class="language__btn">
-        <img class="language__img" src="./logo/language.svg" alt="#">
-        <span class="language__text">RU</span>
-        <img src="./logo/down.png" alt="#">
-      </button>
+      <div class="language" #languageBox [class.language--open]="openList()">
+        <button class="language__btn" (click)="toggleList()">
+          <img class="language__img" src="./logo/language.svg" alt="#">
+          <span class="language__text">{{ languageService.currentLanguage().toUpperCase()}}</span>
+          <img src="./logo/down.png" alt="#">
+        </button>
+        @if(openList()) {
+          <ul class="language__list">
+            @for(lang of languages; track lang) {
+              <li class="language__item">
+                <button class="language__option"
+                  [class.language__option--active]="languageService.currentLanguage() === lang"
+                  type="button"
+                  (click)="selectLanguage(lang)">{{ lang.toUpperCase() }}</button>
+              </li>
+            }
+          </ul>
+        }
       </div>
       <div class="login">
-        <button class="login__btn">
-          <span class="login__text">Войти</span>
+        <button class="login__btn" >
+          <span class="login__text">{{ 'header.auth' | t }}</span>
         </button>
       </div>
     </div>

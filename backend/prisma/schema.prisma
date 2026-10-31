@@ -10,6 +10,7 @@ datasource db {
 model System {
   id Int @id @default(autoincrement())
   title String
+  titleKz String?
   image String?
   link String
 
@@ -19,6 +20,7 @@ model System {
 model Software {
   id Int @id @default(autoincrement())
   title String
+  titleKz String?
   image String?
   fileName String
 
@@ -28,6 +30,7 @@ model Software {
 model Application {
   id Int @id @default(autoincrement())
   title String
+  titleKz String?
   fileName String
 
   @@map("applications")
@@ -36,6 +39,7 @@ model Application {
 model Contact {
   id Int @id @default(autoincrement())
   title String
+  titleKz String?
   emails String[]
   phones String[]
 
